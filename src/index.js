@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    <App />
-);
+import './styles/global.scss';
+
+const root = document.createElement('div');
+root.classList.add('container');
+document.body.appendChild(root);
+const rootDiv = ReactDOM.createRoot(root);
+rootDiv.render(<App />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
